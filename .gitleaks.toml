@@ -1,0 +1,12 @@
+title = "Gitleaks config"
+[extend]
+useDefault = true
+
+[allowlist]
+paths = [
+  '''helix/tests/Cassettes/(.*?).cassette''',
+  '''helix/tests/Integration/(.*?).http''',
+  '''helix/tests/Integration/(.*?).env.json''',
+  '''helix/tests/*''',
+  '''.docker/base-image/php/self-signed-certificates/example.key''',
+]
