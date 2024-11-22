@@ -54,6 +54,6 @@ tools:
     - act@0.2.69
     - gh@2.49.0
     - jq@jq-1.6
-    - awscli@1.33.0
+    - awscli@1.36.8
     - terragrunt@0.69.0
     - tofu@1.8.5
