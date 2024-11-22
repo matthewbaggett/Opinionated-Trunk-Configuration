@@ -52,7 +52,7 @@ actions:
 tools:
   enabled:
     - act@0.2.69
-    - gh@2.49.0
+    - gh@2.62.0
     - jq@jq-1.7
     - awscli@1.33.0
     - terragrunt@0.69.0
