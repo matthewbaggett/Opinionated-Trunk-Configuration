@@ -1,0 +1,59 @@
+# This file controls the behavior of Trunk: https://docs.trunk.io/cli
+# To learn more about the format of this file, see https://docs.trunk.io/reference/trunk-yaml
+version: 0.1
+cli:
+  version: 1.22.8
+# Trunk provides extensibility via plugins. (https://docs.trunk.io/plugins)
+plugins:
+  sources:
+    - id: trunk
+      ref: v1.6.5
+      uri: https://github.com/trunk-io/plugins
+# Many linters and tools depend on runtimes - configure them here. (https://docs.trunk.io/runtimes)
+runtimes:
+  enabled:
+    - go@1.21.0
+    - node@18.12.1
+    - python@3.10.8
+# This is the section where you manage your linters. (https://docs.trunk.io/check/configuration)
+lint:
+  disabled:
+    - gitleaks
+    - trufflehog
+  enabled:
+    - markdownlint@0.42.0
+    - actionlint@1.7.4
+    - taplo@0.9.3
+    - trunk-toolbox@0.5.3
+    - pre-commit-hooks@4.5.0
+    - tofu@1.8.5
+    - checkov@3.2.296
+    - git-diff-check
+    - prettier@3.3.3
+    - terrascan@1.19.1
+    - tflint@0.54.0
+    - trivy@0.56.2
+    - yamllint@1.35.1
+actions:
+  enabled:
+    - trunk-announce
+    - trunk-check-pre-push
+    - trunk-fmt-pre-commit
+    - trunk-upgrade-available
+    - git-pull-mirrors
+  definitions:
+    - id: git-pull-mirrors
+      triggers:
+        - schedule: 24h
+      description: "Pulls git mirrors for all repositories in the workspace."
+      run: |
+        git fetch --all
+        git merge github/main
+tools:
+  enabled:
+    - act@0.2.69
+    - gh@2.49.0
+    - jq@jq-1.7.1
+    - awscli@1.33.0
+    - terragrunt@0.69.0
+    - tofu@1.8.5

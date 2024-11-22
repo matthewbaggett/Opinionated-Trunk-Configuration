@@ -1,0 +1,39 @@
+name: Trunk Cache
+
+permissions: read-all
+
+on:
+  workflow_call:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - .trunk/trunk.*.yaml
+  schedule:
+    - cron: "0 9 * * 1" # 9am Tooling Monday
+
+concurrency:
+  group: ${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
+
+jobs:
+  trunk-cache:
+    name: Trunk Cache
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+    steps:
+      - name: "Known Hosts"
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -p 222 git.grey.ooo  >> ~/.ssh/known_hosts
+          chmod 644 ~/.ssh/known_hosts
+
+      - name: "Checkout"
+        uses: actions/checkout@v4
+
+      - name: "Trunk Cache"
+        uses: trunk-io/trunk-action@v1
+        with:
+          check-mode: populate_cache_only
