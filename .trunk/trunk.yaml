@@ -41,6 +41,7 @@ actions:
     - trunk-fmt-pre-commit
     - trunk-upgrade-available
     - git-pull-mirrors
+    - tf-fmt
   definitions:
     - id: git-pull-mirrors
       triggers:
@@ -49,6 +50,13 @@ actions:
       run: |
         git fetch --all
         git merge github/main
+    - id: tf-fmt
+      triggers:
+        - git_hooks: [pre-commit]
+        - files: ["*.tf", "*.tfvars"]
+      description: "Apply terraform format."
+      run: |
+        terraform fmt -recursive -list=false .
 tools:
   enabled:
     - act@0.2.69
