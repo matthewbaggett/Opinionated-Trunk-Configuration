@@ -22,12 +22,12 @@ lint:
     - trufflehog
   enabled:
     - markdownlint@0.43.0
-    - actionlint@1.7.5
+    - actionlint@1.7.6
     - taplo@0.9.3
     - trunk-toolbox@0.5.4
     - pre-commit-hooks@4.5.0
-    - tofu@1.8.8
-    - checkov@3.2.346
+    - tofu@1.9.0
+    - checkov@3.2.352
     - git-diff-check
     - prettier@3.4.2
     - terrascan@1.19.1
@@ -62,7 +62,7 @@ tools:
     - act@0.2.69
     - gh@2.63.2
     - jq@jq-1.7
-    - awscli@1.36.33
+    - awscli@1.36.38
     - terragrunt@0.69.13
     - terraform@1.9.8
-    - tofu@1.8.8
+    - tofu@1.9.0
