@@ -7,7 +7,7 @@ cli:
 plugins:
   sources:
     - id: trunk
-      ref: v1.6.6
+      ref: v1.6.7
       uri: https://github.com/trunk-io/plugins
 # Many linters and tools depend on runtimes - configure them here. (https://docs.trunk.io/runtimes)
 runtimes:
@@ -21,18 +21,18 @@ lint:
     - gitleaks
     - trufflehog
   enabled:
-    - markdownlint@0.43.0
-    - actionlint@1.7.6
+    - markdownlint@0.44.0
+    - actionlint@1.7.7
     - taplo@0.9.3
     - trunk-toolbox@0.5.4
     - pre-commit-hooks@4.5.0
     - tofu@1.9.0
-    - checkov@3.2.353
+    - checkov@3.2.360
     - git-diff-check
     - prettier@3.4.2
     - terrascan@1.19.1
     - tflint@0.55.0
-    - trivy@0.58.2
+    - trivy@0.59.0
     - yamllint@1.35.1
 actions:
   enabled:
@@ -63,6 +63,6 @@ tools:
     - gh@2.63.2
     - jq@jq-1.7
     - awscli@1.37.2
-    - terragrunt@0.69.13
+    - terragrunt@0.72.6
     - terraform@1.9.8
     - tofu@1.9.0
