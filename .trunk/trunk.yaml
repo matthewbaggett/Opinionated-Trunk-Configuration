@@ -27,12 +27,12 @@ lint:
     - trunk-toolbox@0.5.4
     - pre-commit-hooks@4.5.0
     - tofu@1.9.1
-    - checkov@3.2.414
+    - checkov@3.2.416
     - git-diff-check
     - prettier@3.5.3
     - terrascan@1.19.1
     - tflint@0.57.0
-    - trivy@0.61.1
+    - trivy@0.62.1
     - yamllint@1.37.1
 actions:
   enabled:
