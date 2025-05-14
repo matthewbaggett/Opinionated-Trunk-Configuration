@@ -27,7 +27,7 @@ lint:
     - trunk-toolbox@0.5.4
     - pre-commit-hooks@4.5.0
     - tofu@1.9.1
-    - checkov@3.2.416
+    - checkov@3.2.420
     - git-diff-check
     - prettier@3.5.3
     - terrascan@1.19.1
