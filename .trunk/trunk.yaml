@@ -21,13 +21,13 @@ lint:
     - gitleaks
     - trufflehog
   enabled:
-    - markdownlint@0.44.0
+    - markdownlint@0.45.0
     - actionlint@1.7.7
     - taplo@0.9.3
     - trunk-toolbox@0.5.4
     - pre-commit-hooks@4.5.0
     - tofu@1.9.1
-    - checkov@3.2.424
+    - checkov@3.2.432
     - git-diff-check
     - prettier@3.5.3
     - terrascan@1.19.1
@@ -63,6 +63,6 @@ tools:
     - gh@2.72.0
     - jq@jq-1.7
     - awscli@1.40.7
-    - terragrunt@0.78.4
+    - terragrunt@0.80.2
     - terraform@1.9.8
     - tofu@1.9.1
