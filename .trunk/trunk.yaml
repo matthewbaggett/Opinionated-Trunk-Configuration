@@ -27,9 +27,9 @@ lint:
     - trunk-toolbox@0.5.4
     - pre-commit-hooks@4.5.0
     - tofu@1.9.1
-    - checkov@3.2.442
+    - checkov@3.2.445
     - git-diff-check
-    - prettier@3.5.3
+    - prettier@3.6.0
     - terrascan@1.19.1
     - tflint@0.58.0
     - trivy@0.63.0
@@ -62,7 +62,7 @@ tools:
     - act@0.2.78
     - gh@2.72.0
     - jq@jq-1.7
-    - awscli@1.40.35
-    - terragrunt@0.81.6
+    - awscli@1.40.40
+    - terragrunt@0.81.10
     - terraform@1.9.8
     - tofu@1.9.1
