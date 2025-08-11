@@ -27,7 +27,7 @@ lint:
     - trunk-toolbox@0.5.4
     - pre-commit-hooks@4.5.0
     - tofu@1.10.5
-    - checkov@3.2.457
+    - checkov@3.2.460
     - git-diff-check
     - prettier@3.6.2
     - terrascan@1.19.1
@@ -59,10 +59,10 @@ actions:
         terraform fmt -recursive -list=false .
 tools:
   enabled:
-    - act@0.2.78
-    - gh@2.72.0
+    - act@0.2.80
+    - gh@2.76.2
     - jq@jq-1.7
-    - awscli@1.42.1
-    - terragrunt@0.83.0
+    - awscli@1.42.6
+    - terragrunt@0.84.1
     - terraform@1.9.8
     - tofu@1.10.5
