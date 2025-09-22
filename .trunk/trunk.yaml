@@ -63,6 +63,6 @@ tools:
     - gh@2.78.0
     - jq@jq-1.7
     - awscli@1.42.16
-    - terragrunt@0.87.2
+    - terragrunt@0.87.4
     - terraform@1.9.8
     - tofu@1.10.6
