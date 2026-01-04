@@ -13,3 +13,6 @@ rules:
     forbid-implicit-octal: true
   document-start: disable
   line-length: disable
+  comments:
+    require-starting-space: true
+    min-spaces-from-content: 1
