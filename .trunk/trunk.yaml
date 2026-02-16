@@ -21,19 +21,19 @@ lint:
     - gitleaks
     - trufflehog
   enabled:
-    - markdownlint@0.45.0
+    - markdownlint@0.47.0
     - actionlint@1.7.8
     - taplo@0.10.0
     - trunk-toolbox@0.5.4
     - pre-commit-hooks@4.5.0
     - tofu@1.10.6
-    - checkov@3.2.483
+    - checkov@3.2.502
     - git-diff-check
-    - prettier@3.6.2
+    - prettier@3.8.1
     - terrascan@1.19.1
     - tflint@0.59.1
     - trivy@0.67.2
-    - yamllint@1.37.1
+    - yamllint@1.38.0
 actions:
   enabled:
     - trunk-announce
